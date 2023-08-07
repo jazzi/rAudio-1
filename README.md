@@ -14,7 +14,7 @@ Instructions to build rAudio on Cubieboard2
 
 ```text
 version=1
-release=20220610 # check the release you want
+release=20230630 # check the release you want
 ```
 10. create two dummy files `/boot/config.txt0` and `/boot/cmdline.txt0`, many rAudio scripts will grep it
 11. UTF-8 support on the target:
@@ -23,7 +23,7 @@ release=20220610 # check the release you want
 * run `locale-gen`
 * `sudo localectl set-locale en_US.UTF-8`
 
-12. on the target download and run create-ros.sh as root, please aware the password for root is changed to **ros** now
+12. on the target download and run [create-ros.sh](https://github.com/rern/rOS/blob/main/create-ros.sh) as root, please aware the password for root is changed to **ros** now
 13. set the timezone by `timedatectl set-timezone Asia/Shanghai`
 14. change taskset from 3 to 0 in /etc/systemd/system/mpd.service.d/override.conf otherwise will get a tastset error when checking `systemctl status mpd.service`, because `taskset -c 3` means use the forth CPU core and Cubieboard2's A20 has two CPU cores only
 15. add user `alarm` and `mpd` to group `audio` by `sudo usermod --append --groups audio alarm mpd`
