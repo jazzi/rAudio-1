@@ -3,7 +3,7 @@ Instructions to build rAudio on Cubieboard2
 ---
 
 1. Follow [Installation guide on ArchLinuxARM.org](https://archlinuxarm.org/platforms/armv7/allwinner/cubieboard-2)
-2. Insert SD Card into cubieboard2, power on and login by ssh, user alarm:alarm and root:root
+2. Insert SD Card into cubieboard2, power on and login by ssh, user alarm:alarm then su to root by command `su -` and password is root
 3. Set your mirror by edit /etc/pacman.d/mirrorlist and add server `Server = https://mirrors.bfsu.edu.cn/archlinuxarm/$arch/$repo`
 4. echo noarp >> /etc/dhcpcd.conf
 5. echo DNSSEC=no >> /etc/systemd/resolved.conf
