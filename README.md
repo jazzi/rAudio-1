@@ -23,7 +23,7 @@ release=20230630 # check the release you want
 * run `locale-gen`
 * `sudo localectl set-locale en_US.UTF-8`
 
-12. on the target download and run [create-ros.sh](https://github.com/jazzi/rOS/blob/main/create-ros.sh) as root, please aware the password for root is changed to **ros** now
+12. on the target download and run [create-ros.sh](https://github.com/jazzi/rOS/blob/main/create-ros.sh) as root, please aware the password for root is changed to **ros** now. ## add https://ghproxy.com before the https://github.com address if has blocking problem
 13. set the timezone by `timedatectl set-timezone Asia/Shanghai`
 14. change taskset from 3 to 0 in /etc/systemd/system/mpd.service.d/override.conf otherwise will get a tastset error when checking `systemctl status mpd.service`, because `taskset -c 3` means use the forth CPU core and Cubieboard2's A20 has two CPU cores only
 15. add user `alarm` and `mpd` to group `audio` by `sudo usermod --append --groups audio alarm mpd`
